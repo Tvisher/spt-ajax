@@ -160,8 +160,9 @@
                         </picture>
                     </div>
                     <div class="poster-area__content">
-                        <h1 class="poster-area__title">Благодарности</h1>
-                        <span class="poster-area__descr">Отблагодарите того кто сделал<br> для вас хорошее дело</span>
+                        <!-- <h1 class="poster-area__title">Благодарности</h1> -->
+                        <p class="poster-area__descr">Все вместе мы делаем общее дело, и каждый из нас отвечает за качество нашего пива от поля до бокала. Если твой коллега проявил внимание, позитивный настрой, проактивность и неутомимый энтузиазм в достижении общего результата, скажи ему спасибо за это.</p>
+                        <p class="poster-area__descr"> «Балтика» должна знать своих героев!</p>
                         <button type="button" class="poster-area__btn" data-modal-id="thanksCreater">Сказать спасибо</button>
                     </div>
                 </div>
@@ -858,8 +859,8 @@
             var dh = document.body.offsetHeight;
 
             if (wt + wh >= et || wh + wt == dh || eh + et < wh) {
-                pageCounter++;
                 block_show = true;
+                pageCounter++;
                 fetch('./ajax.php', {})
                     .then((response) => {
                         return response.text();

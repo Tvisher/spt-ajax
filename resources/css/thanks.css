@@ -1,7 +1,6 @@
 .section-thanks .section-thanks__poster {
   margin: 35px 0;
   width: 100%;
-  height: 400px;
   position: relative;
 }
 .section-thanks .poster-area__image {
@@ -21,12 +20,16 @@
      object-position: right;
 }
 .section-thanks .poster-area__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
   width: 100%;
   height: 100%;
   color: #ffffff;
   background: linear-gradient(90deg, #03458d 23.67%, rgba(3, 67, 136, 0) 56.55%);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  padding: 96px 0 20px 30px;
+  padding: 80px 0 60px 30px;
 }
 .section-thanks .poster-area__title {
   font-weight: 700;
@@ -37,6 +40,7 @@
   margin-bottom: 12px;
 }
 .section-thanks .poster-area__descr {
+  max-width: 50%;
   font-weight: 700;
   font-size: 18px;
   line-height: 130%;
@@ -232,6 +236,9 @@
   .section-thanks .poster-area__title {
     font-size: 42px;
   }
+  .section-thanks .poster-area__descr {
+    max-width: 40%;
+  }
 }
 @media (max-width: 768px) {
   .section-thanks__list .list-item {
@@ -245,9 +252,14 @@
     align-items: flex-start;
     justify-content: flex-end;
     background: linear-gradient(0deg, #03458d 35.78%, rgba(3, 67, 136, 0) 59%);
+    margin-top: auto;
   }
   .section-thanks .section-thanks__poster {
-    height: 550px;
+    min-height: 100vw;
+    display: flex;
+  }
+  .section-thanks .poster-area__descr {
+    max-width: initial;
   }
   .section-thanks .poster-area__image img {
     -o-object-position: top;
@@ -270,8 +282,6 @@
   .section-thanks .section-thanks__poster {
     height: 105vw;
   }
-}
-@media (max-width: 412px) {
   .section-thanks .poster-area__title {
     font-size: 24px;
   }
@@ -283,6 +293,13 @@
     padding: 15px 35px;
     font-size: 14px;
   }
+}
+@media (max-width: 440px) {
+  .section-thanks .section-thanks__poster {
+    min-height: 130vw;
+  }
+}
+@media (max-width: 412px) {
   .section-thanks__list {
     margin-right: 0;
     margin-left: 0;
@@ -291,6 +308,11 @@
     padding: 10px;
     padding-left: 0;
     padding-right: 0;
+  }
+}
+@media (max-width: 380px) {
+  .section-thanks .section-thanks__poster {
+    min-height: 150vw;
   }
 }
 .thanks-modal {
