@@ -1,0 +1,464 @@
+.section-map .city_moskva {
+    position: absolute;
+    top: 205px;
+    left: 194px;
+}
+
+.section-map .city_sankt-peterburg {
+       position: absolute;
+    top: 135px;
+    left: 200px;
+}
+
+.section-map .city_volgograd {
+    position: absolute;
+    top: 275px;
+    left: 280px;
+}
+
+.section-map .city_kazan {
+    position: absolute;
+    top: 200px;
+    left: 310px;
+}
+
+.section-map .city_voronezh {
+    position: absolute;
+    top: 245px;
+    left: 250px;
+}
+
+.section-map .city_perm {
+    position: absolute;
+    top: 215px;
+    left: 370px;
+}
+
+.section-map .city_ufa {
+    position: absolute;
+    top: 240px;
+    left: 360px;
+}
+
+.section-map .city_krasnoyarsk {
+    position: absolute;
+    top: 285px;
+    left: 515px;
+}
+
+.section-map .city_omsk {
+    position: absolute;
+    top: 305px;
+    left: 400px;
+}
+
+.section-map .city_rostov-na-donu {
+    position: absolute;
+    top: 230px;
+    left: 180px;
+}
+
+.section-map .city_ekaterinburg {
+    position: absolute;
+    top: 245px;
+    left: 325px;
+}
+
+.section-map .city_samara {
+    position: absolute;
+    top: 240px;
+    left: 303px;
+}
+
+.section-map .city_nizhniy-novgorod {
+    position: absolute;
+    top: 177px;
+    left: 290px;
+}
+
+.section-map .city_chelyabinsk {
+    position: absolute;
+    top: 215px;
+    left: 390px;
+}
+
+.section-map .city_arkhangelsk {
+    position: absolute;
+    top: 140px;
+    left: 290px;
+}
+
+.section-map .city_astrakhan {
+    position: absolute;
+    top: 315px;
+    left: 265px;
+}
+
+.section-map .city_belgorod {
+    position: absolute;
+    top: 305px;
+    left: 100px;
+}
+
+.section-map .city_birobidzhan {
+    position: absolute;
+    top: 375px;
+    left: 775px;
+}
+
+.section-map .city_blagoveshchensk {
+    position: absolute;
+    top: 368px;
+    left: 725px;
+}
+
+.section-map .city_bryansk {
+    position: absolute;
+    top: 280px;
+    left: 92px;
+}
+
+.section-map  .city_velikiy-novgorod {
+    position: absolute;
+    top: 150px;
+    left: 245px;
+}
+
+.section-map   .city_vladimir {
+    position: absolute;
+    top: 195px;
+    left: 265px;
+}
+
+.section-map  .city_vologda {
+    position: absolute;
+    top: 155px;
+    left: 265px;
+}
+
+.section-map .city_ivanovo {
+    position: absolute;
+    top: 232px;
+    left: 280px;
+}
+
+.section-map .city_irkutsk {
+    position: absolute;
+    top: 350px;
+    left: 610px;
+}
+
+.section-map .city_kaliningrad {
+    position: absolute;
+    top: 180px;
+    left: 85px;
+}
+
+.section-map  .city_kaluga {
+    position: absolute;
+    top: 233px;
+    left: 215px;
+}
+
+.section-map .city_kemerovo {
+    position: absolute;
+    top: 377px;
+    left: 460px;
+}
+
+.section-map .city_kirov {
+    position: absolute;
+    top: 209px;
+    left: 290px;
+}
+
+.section-map  .city_kurgan {
+    position: absolute;
+    top: 305px;
+    left: 330px;
+}
+
+.section-map  .city_kursk {
+    position: absolute;
+    top: 292px;
+    left: 115px;
+}
+
+.section-map  .city_lipetsk {
+    position: absolute;
+    top: 285px;
+    left: 143px;
+}
+
+.section-map .city_magadan {
+    position: absolute;
+    top: 210px;
+    left: 770px;
+}
+
+.section-map .city_murmansk {
+    position: absolute;
+    top: 100px;
+    left: 295px;
+}
+
+.section-map .city_oryel {
+    position: absolute;
+    top: 263px;
+    left: 115px;
+}
+
+.section-map .city_orenburg {
+    position: absolute;
+    top: 290px;
+    left: 300px;
+}
+
+.section-map .city_penza {
+    position: absolute;
+    top: 280px;
+    left: 265px;
+}
+
+.section-map .city_pskov {
+    position: absolute;
+    top: 193px;
+    left: 150px;
+}
+
+.section-map .city_ryazan {
+    position: absolute;
+    top: 238px;
+    left: 265px;
+}
+
+.section-map .city_saratov  {
+    position: absolute;
+    top: 302px;
+    left: 252px;
+}
+
+.section-map .city_smolensk {
+    position: absolute;
+    top: 284px;
+    left: 94px;
+}
+
+.section-map .city_tambov {
+    position: absolute;
+    top: 273px;
+    left: 225px;
+}
+
+.section-map  .city_tver {
+    position: absolute;
+    top: 174px;
+    left: 225px;
+}
+
+.section-map .city_tomsk {
+    position: absolute;
+    top: 337px;
+    left: 441px;
+}
+
+.section-map .city_tula {
+        position: absolute;
+    top: 240px;
+    left: 242px;
+}
+
+.section-map .city_tyumen {
+       position: absolute;
+    top: 325px;
+    left: 395px;
+}
+
+.section-map .city_ulyanovsk {
+       position: absolute;
+    top: 264px;
+    left: 315px;
+}
+
+.section-map .city_yuzhno-sakhalinsk {
+        position: absolute;
+    top: 320px;
+    left: 824px;
+}
+
+.section-map .city_yaroslavl {
+        position: absolute;
+    top: 170px;
+    left: 254px;
+}
+.section-map .city_maykop {
+    position: absolute;
+    top: 327px;
+    left: 123px;
+}
+.section-map .city_gorno-altaysk {
+    position: absolute;
+   top: 392px;
+   left: 447px;
+}
+.section-map .city_ufa {
+    position: absolute;
+  top: 232px;
+  left: 297px;
+}
+.section-map .city_ulan-ude {
+    position: absolute;
+   top: 402px;
+    left: 587px;
+}
+.section-map .city_makhachkala {
+    position: absolute;
+       top: 326px;
+    left: 135px;
+}
+.section-map .city_magas {
+    position: absolute;
+    top: 332px;
+    left: 108px;
+}
+.section-map .city_nalchik {
+    position: absolute;
+    top: 350px;
+    left: 115px;
+}
+.section-map .city_saransk {
+    position: absolute;
+   top: 218px;
+    left: 275px;
+}
+.section-map .city_elista {
+    position: absolute;
+    top: 308px;
+    left: 135px;
+}
+.section-map .city_cherkessk {
+    position: absolute;
+top: 313px;
+    left: 114px;
+}
+.section-map .city_petrozavodsk {
+    position: absolute;
+    top: 108px;
+    left: 256px;
+}
+
+.section-map .city_syktyvkar {
+    position: absolute;
+top: 198px;
+    left: 326px;
+}
+.section-map .city_simferopol {
+    position: absolute;
+top: 231px;
+    left: 56px;
+}
+.section-map .city_yoshkar-ola {
+    position: absolute;
+    top: 171px;
+    left: 302px;
+}
+.section-map .city_yakutsk {
+    position: absolute;
+     top: 223px;
+    left: 707px;
+}
+.section-map .city_vladikavkaz {
+    position: absolute;
+         top: 323px;
+    left: 107px;
+}
+.section-map .city_kyzyl {
+    position: absolute;
+            top: 409px;
+    left: 487px;
+}
+.section-map .city_izhevsk {
+    position: absolute;
+              top: 229px;
+    left: 313px;
+}
+.section-map .city_abakan {
+    position: absolute;
+            top: 396px;
+    left: 463px;
+}
+.section-map .city_groznyy {
+    position: absolute;
+           top: 316px;
+    left: 126px;
+}
+.section-map .city_cheboksary {
+    position: absolute;
+       top: 236px;
+    left: 286px;
+}
+.section-map .city_barnaul {
+    position: absolute;
+           top: 366px;
+    left: 426px;
+}
+.section-map .city_chita {
+    position: absolute;
+         top: 396px;
+    left: 636px;
+}
+.section-map .city_petropavlovsk-kamchatskiy {
+    position: absolute;
+         top: 236px;
+    left: 891px;
+}
+.section-map .city_krasnodar {
+    position: absolute;
+           top: 306px;
+    left: 96px;
+}
+.section-map .city_krasnoyarsk {
+    position: absolute;
+            top: 296px;
+    left: 471px;
+}
+.section-map .city_perm {
+    position: absolute;
+            top: 216px;
+    left: 318px;
+}
+.section-map .city_vladivostok {
+    position: absolute;
+               top: 443px;
+    left: 802px;
+}
+.section-map .city_stavropol {
+    position: absolute;
+            top: 318px;
+    left: 142px;
+}
+.section-map .city_khabarovsk {
+    position: absolute;
+           top: 375px;
+    left: 792px;
+}
+.section-map .city_sevastopol {
+    position: absolute;
+      top: 245px;
+    left: 37px;
+}
+.section-map .city_birobidzhan {
+    position: absolute;
+      top: 371px;
+    left: 777px;
+}
+.section-map .city_naryan-mar {
+    position: absolute;
+      top: 151px;
+    left: 337px;
+}
+.section-map .city_khanty-mansiysk {
+    position: absolute;
+         top: 241px;
+    left: 387px;
+}

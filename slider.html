@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Стили проекта -->
+    <link href="./resources/css/jquery.kladr.min.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="./resources/css/main.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="./resources/css/new.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="./resources/css/map.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="./resources/css/aboutus.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <link href="./resources/css/styles.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'CarlsbergSans';
+            font-style: normal;
+            font-weight: normal;
+            src: url("./resources/fonts/CarlsbergSans-Light.woff2") format("woff2"), url("./resources/fonts/CarlsbergSans-Light.woff") format("woff"), url("./resources/fonts/CarlsbergSans-Light.ttf") format("truetype"), url("./resources/fonts/CarlsbergSans-Light.eot") format("eot");
+        }
+
+        @font-face {
+            font-family: 'CarlsbergSans';
+            font-style: italic;
+            font-weight: normal;
+            src: url("./resources/fonts/CarlsbergSans-LightItalic.woff2") format("woff2"), url("./resources/fonts/CarlsbergSans-LightItalic.woff") format("woff"), url("./resources/fonts/CarlsbergSans-LightItalic.ttf") format("truetype"), url("./resources/fonts/CarlsbergSans-LightItalic.eot") format("eot");
+        }
+
+        @font-face {
+            font-family: 'CarlsbergSans';
+            font-style: normal;
+            font-weight: bold;
+            src: url("./resources/fonts/CarlsbergSans-Bold.woff2") format("woff2"), url("./resources/fonts/CarlsbergSans-Bold.woff") format("woff"), url("./resources/fonts/CarlsbergSans-Bold.ttf") format("truetype"), url("./resources/fonts/CarlsbergSans-Bold.eot") format("eot");
+        }
+
+        @font-face {
+            font-family: 'CarlsbergSans';
+            font-style: italic;
+            font-weight: bold;
+            src: url("./resources/fonts/CarlsbergSans-BoldItalic.woff2") format("woff2"), url("./resources/fonts/CarlsbergSans-BoldItalic.woff") format("woff"), url("./resources/fonts/CarlsbergSans-BoldItalic.ttf") format("truetype"), url("./resources/fonts/CarlsbergSans-BoldItalic.eot") format("eot");
+        }
+    </style>
+
+    <!-- Стили спецпроекта "Спасибо" -->
+    <link href="./resources/css/thanks.css" type="text/css" data-template-style="true" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__top">
+            <div class="header__inner header__inner--flex">
+                <div class="header__top-left">
+                    <a href="/" class="header__logotype">
+                        <img srcset="./resources/images/logo_norm.png" alt="My default image" width="244">
+                    </a>
+                    <div class="header__mob-buttons">
+                        <button class="header__mob-buttons-search header__mob-buttons-search--open" data-role="search.toggle" data-class-name="header__mob-buttons-search">
+                            <svg class="svg-icon svg-icon--search header__mob-buttons-search-open">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+                            </svg><svg class="svg-icon svg-icon--search header__mob-buttons-search-close">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+                            </svg></button>
+                        <button class="header__mob-buttons-menu" data-role="vertical.open">
+                            <svg class="svg-icon svg-icon--hamburger header__mob-buttons-menu-icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-hamburger"></use>
+                            </svg></button>
+                    </div>
+                </div>
+                <div class="header__top-right">
+                    <div class="header__social-buttons">
+                        Напишите нам!
+                        <a href="mailto:mybaltika@baltika.com" class="header__social-button">
+                            <svg class="svg-icon svg-icon--letter-2 header__social-button-icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-letter-2"></use>
+                            </svg></a>
+                    </div>
+                    <div class="header__profile">
+                        <div class="small-profile-block">
+                            <a href="/auth/" class="small-profile-block__switch-btn" data-role="open-modal.login">Войти</a>
+
+                            <div class="small-profile-block__avatar">
+                                <div class="small-profile-block__svg-image">
+                                    <svg class="svg-icon svg-icon--user small-profile-block__svg-image-icon">
+                                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-user"></use>
+                                    </svg>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="header__inner header__inner--flex">
+
+                <nav class="navbar"><a href="/allnews/" class="navbar__item ">Новости</a>
+                    <a href="/vse-o-pive/" class="navbar__item ">Всё о пиве</a>
+                    <a href="/rabochee-vremya/" class="navbar__item ">Рабочее время</a>
+                    <a href="/nashi-lyudi/" class="navbar__item ">Наши люди</a>
+                    <a href="/my-i-obshestvo/" class="navbar__item ">Мы и общество</a>
+                    <a href="/quiz/" class="navbar__item ">Викторины</a>
+                    <a href="/media/" class="navbar__item ">Медиа</a>
+                    <a href="/contest/" class="navbar__item ">Конкурсы</a>
+                </nav><button class="header__search-btn header__search-btn--open" data-role="search.toggle" data-class-name="header__search-btn">
+                    <svg class="svg-icon svg-icon--search header__search-btn-icon-open">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+                    </svg><svg class="svg-icon svg-icon--search header__search-btn-icon-close">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-close"></use>
+                    </svg></button>
+            </div>
+        </div>
+        <div class="header__search">
+            <div class="header__inner">
+
+                <form action="/search/">
+                    <div class="search-form">
+                        <input type="search" name="q" placeholder="Поиск..." class="search-form__input"><button type="submit" name="s" class="search-form__button">
+                            <svg class="svg-icon svg-icon--search search-form__button-icon">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-search"></use>
+                            </svg></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <!-- Вёрстка в thanks-template для встривания в шаблон страницы  -->
+        <div class="thanks-template">
+            <div class="thanks-block">
+                <h2 class="thanks-block__title">БЛАГОДАРНОСТИ</h2>
+                <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+                <div class="swiper" id="thanks-sp-slider">
+                    <ul class="section-thanks__list swiper-wrapper">
+                        <li class="list-item swiper-slide" data-type-postcard="proactivity">
+                            <div class="list-item__wrapper">
+                                <div class="list-item__bg-image">
+                                    <img src="./resources/images/thatks-proj/proactivity.svg" alt="">
+                                </div>
+                                <div class="list-item__content">
+                                    <span class="list-item__title">Спасибо за проактивность</span>
+
+                                    <div class="list-item__block">
+                                        <span class="block__nameplate">От кого:</span>
+                                        <span class="block__name">Юлия Рогова</span>
+                                        <span class="block__from">г.Москва специалист по всем специальностям</span>
+                                    </div>
+
+                                    <div class="list-item__block">
+                                        <span class="block__nameplate">Кому:</span>
+                                        <span class="block__name">Ольга Литвиненко</span>
+                                        <span class="block__from">г.Саратов специалист по всем специальностям</span>
+                                    </div>
+
+                                    <div class="list-item__text">Благодарю от всей души за понимание, за добросердечность, отзывчивость, искренность, поддержку! Приятно знать, что такие люди есть рядом. Желаю процветания, добра, благополучия, гармонии и счастья! Искренне, от всего сердца, благодарю за помощь, своевременную и такую необходимую.</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-item swiper-slide" data-type-postcard="high-quality">
+                            <div class="list-item__wrapper">
+                                <div class="list-item__bg-image">
+                                    <img src="./resources/images/thatks-proj/high-quality.svg" alt="">
+                                </div>
+                                <div class="list-item__content">
+                                    <span class="list-item__title">Спасибо за высокое качество</span>
+
+                                    <div class="list-item__block">
+                                        <span class="block__nameplate">От кого:</span>
+                                        <span class="block__name">Юлия Рогова</span>
+                                        <span class="block__from">г.Москва специалист по всем специальностям</span>
+                                    </div>
+
+                                    <div class="list-item__block">
+                                        <span class="block__nameplate">Кому:</span>
+                                        <span class="block__name">Ольга Литвиненко</span>
+                                        <span class="block__from">г.Саратов специалист по всем специальностям</span>
+                                    </div>
+
+                                    <div class="list-item__text">Благодарю от всей души за понимание, за добросердечность, отзывчивость, искренность, поддержку! Приятно знать, что такие люди есть рядом. Желаю процветания, добра, благополучия, гармонии и счастья! Искренне, от всего сердца, благодарю за помощь, своевременную и такую необходимую.</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-item swiper-slide" data-type-postcard="great-dedication">
+                            <div class="list-item__wrapper">
+                                <div class="list-item__bg-image">
+                                    <img src="./resources/images/thatks-proj/great-dedication.svg" alt="">
+                                </div>
+                                <div class="list-item__content">
+                                    <span class="list-item__title">Спасибо за большую самоотдачу</span>
+
+                                    <div class="list-item__block">
+                                        <span class="block__nameplate">От кого:</span>
+                                        <span class="block__name">Юлия Рогова</span>
+                                        <span class="block__from">г.Москва специалист по всем специальностям</span>
+                                    </div>
+
+                                    <div class="list-item__block">
+                                        <span class="block__nameplate">Кому:</span>
+                                        <span class="block__name">Ольга Литвиненко</span>
+                                        <span class="block__from">г.Саратов специалист по всем специальностям</span>
+                                    </div>
+
+                                    <div class="list-item__text">Благодарю от всей души за понимание, за добросердечность, отзывчивость, искренность, поддержку! Приятно знать, что такие люди есть рядом. Желаю процветания, добра, благополучия, гармонии и счастья! Искренне, от всего сердца, благодарю за помощь, своевременную и такую необходимую.</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-item swiper-slide" data-type-postcard="brilliant-ideas">
+                            <div class="list-item__wrapper">
+                                <div class="list-item__bg-image">
+                                    <img src="./resources/images/thatks-proj/brilliant-ideas.svg" alt="">
+                                </div>
+                                <div class="list-item__content">
+                                    <span class="list-item__title">Спасибо за блестящие идеи</span>
+
+                                    <div class="list-item__block">
+                                        <span class="block__nameplate">От кого:</span>
+                                        <span class="block__name">Юлия Рогова</span>
+                                        <span class="block__from">г.Москва специалист по всем специальностям</span>
+                                    </div>
+
+                                    <div class="list-item__block">
+                                        <span class="block__nameplate">Кому:</span>
+                                        <span class="block__name">Ольга Литвиненко</span>
+                                        <span class="block__from">г.Саратов специалист по всем специальностям</span>
+                                    </div>
+
+                                    <div class="list-item__text">Благодарю от всей души за понимание, за добросердечность, отзывчивость, искренность, поддержку! Приятно знать, что такие люди есть рядом. Желаю процветания, добра, благополучия, гармонии и счастья! Искренне, от всего сердца, благодарю за помощь, своевременную и такую необходимую.</div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="list-item swiper-slide" data-type-postcard="reliable-shoulder">
+                            <div class="list-item__wrapper">
+                                <div class="list-item__bg-image">
+                                    <img src="./resources/images/thatks-proj/reliable-shoulder.svg" alt="">
+                                </div>
+                                <div class="list-item__content">
+                                    <span class="list-item__title">Спасибо за надежное плечо</span>
+
+                                    <div class="list-item__block">
+                                        <span class="block__nameplate">От кого:</span>
+                                        <span class="block__name">Юлия Рогова</span>
+                                        <span class="block__from">г.Москва специалист по всем специальностям</span>
+                                    </div>
+
+                                    <div class="list-item__block">
+                                        <span class="block__nameplate">Кому:</span>
+                                        <span class="block__name">Ольга Литвиненко</span>
+                                        <span class="block__from">г.Саратов специалист по всем специальностям</span>
+                                    </div>
+
+                                    <div class="list-item__text">Благодарю от всей души за понимание, за добросердечность, отзывчивость, искренность, поддержку! Приятно знать, что такие люди есть рядом. Желаю процветания, добра, благополучия, гармонии и счастья! Искренне, от всего сердца, благодарю за помощь, своевременную и такую необходимую.</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="swiper-controls-block">
+                        <div class="swiper-button-prev">
+                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M8 1L2 7L8 13" stroke="#263978" stroke-width="2.5" />
+                            </svg>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next">
+                            <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M1 13L7 7L1 0.999999" stroke="#263978" stroke-width="2.5" />
+                            </svg>
+                        </div>
+                    </div>
+                    <button class="thanks-sp-btn" data-modal-id="thanksCreater">Сказать спасибо</button>
+                </div>
+            </div>
+            <!-- Подключение и инициализация слайдера -->
+            <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+            <script>
+                const thanksSpSlider = new Swiper('#thanks-sp-slider', {
+                    grabCursor: true,
+                    slidesPerView: 1,
+                    speed: 800,
+                    spaceBetween: 20,
+                    effect: 'fade',
+                    loop: true,
+                    fadeEffect: {
+                        crossFade: true
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    }, pagination: {
+                        el: '.swiper-pagination',
+                        type: 'bullets',
+                        clickable: true,
+                    },
+                });
+            </script>
+
+            <!-- Модальное окно становится видимым когда к нему добавляется класс show -->
+            <div class="thanks-modal" id="thanksCreater">
+                <div class="thanks-modal__content">
+                    <div class="close-btn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0L0 1.41421L8.29672 9.71094L0.00164873 18.006L1.41586 19.4202L9.71094 11.1252L18.006 19.4202L19.4202 18.006L11.1252 9.71094L19.4219 1.41421L18.0077 0L9.71094 8.29672L1.41421 0Z" fill="#9C9C9C" />
+                        </svg>
+                    </div>
+                    <form action="#" id="thank-form-crater" name="thanks-form" class="thanks-modal__form thanks-kit">
+                        <div class="thanks-kit__block">
+                            <h2 class="thanks-kit__title">Спасибо</h2>
+                            <span class="sample-tille">Выбери шаблон открытки</span>
+                            <ul class="thanks-kit__samples">
+                                <li class="sample" data-sample-postcard="proactivity">
+                                    <div class="sample__wrapper">
+                                        <div class="sample__postcard-img">
+                                            <img src="./resources/images/thatks-proj/proactivity-mod.svg" alt="">
+                                        </div>
+                                        <input type="radio" name="postcard-template" value="proactivity" class="sample__input">
+                                        <div class="sample__name">
+                                            <span>За проактивность</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="sample" data-sample-postcard="high-quality">
+                                    <div class="sample__wrapper">
+                                        <div class="sample__postcard-img">
+                                            <img src="./resources/images/thatks-proj/high-quality-mod.svg" alt="">
+                                        </div>
+                                        <input type="radio" name="postcard-template" value="high-quality" class="sample__input">
+                                        <div class="sample__name">
+                                            <span>За высокое качество</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="sample" data-sample-postcard="great-dedication">
+                                    <div class="sample__wrapper">
+                                        <div class="sample__postcard-img">
+                                            <img src="./resources/images/thatks-proj/great-dedication-mod.svg" alt="">
+                                        </div>
+                                        <input type="radio" name="postcard-template" value="great-dedication" class="sample__input">
+                                        <div class="sample__name">
+                                            <span>За большую самоотдачу</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="sample" data-sample-postcard="brilliant-ideas">
+                                    <div class="sample__wrapper">
+                                        <div class="sample__postcard-img">
+                                            <img src="./resources/images/thatks-proj/brilliant-ideas-mod.svg" alt="">
+                                        </div>
+                                        <input type="radio" name="postcard-template" value="brilliant-ideas" class="sample__input">
+                                        <div class="sample__name">
+                                            <span>За блестящие идеи</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="sample" data-sample-postcard="reliable-shoulder">
+                                    <div class="sample__wrapper">
+                                        <div class="sample__postcard-img">
+                                            <img src="./resources/images/thatks-proj/reliable-shoulder-mod.svg" alt="">
+                                        </div>
+                                        <input type="radio" name="postcard-template" value="reliable-shoulder" class="sample__input">
+                                        <div class="sample__name">
+                                            <span>За надежное плечо</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="sample" data-sample-postcard="attention-details">
+                                    <div class="sample__wrapper">
+                                        <div class="sample__postcard-img">
+                                            <img src="./resources/images/thatks-proj/attention-details-mod.svg" alt="">
+                                        </div>
+                                        <input type="radio" name="postcard-template" value="attention-details" class="sample__input">
+                                        <div class="sample__name">
+                                            <span>За внимание <br>к деталям</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="sample" data-sample-postcard="understanding-and-support">
+                                    <div class="sample__wrapper">
+                                        <div class="sample__postcard-img">
+                                            <img src="./resources/images/thatks-proj/understanding-and-support-mod.svg" alt="">
+                                        </div>
+                                        <input type="radio" name="postcard-template" value="understanding-and-support" class="sample__input">
+                                        <div class="sample__name">
+                                            <span>За понимание <br>и поддержку</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="sample" data-sample-postcard="tireless-enthusiasm">
+                                    <div class="sample__wrapper">
+                                        <div class="sample__postcard-img">
+                                            <img src="./resources/images/thatks-proj/tireless-enthusiasm-mod.svg" alt="">
+                                        </div>
+                                        <input type="radio" name="postcard-template" value="tireless-enthusiasm" class="sample__input">
+                                        <div class="sample__name">
+                                            <span>За неутомимый энтузиазм</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="sample" data-sample-postcard="inexhaustible-energy">
+                                    <div class="sample__wrapper">
+                                        <div class="sample__postcard-img">
+                                            <img src="./resources/images/thatks-proj/inexhaustible-energy-mod.svg" alt="">
+                                        </div>
+                                        <input type="radio" name="postcard-template" value="inexhaustible-energy" class="sample__input">
+                                        <div class="sample__name">
+                                            <span>За неиссякаемую энергию</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="sample" data-sample-postcard="positive-attitude">
+                                    <div class="sample__wrapper">
+                                        <div class="sample__postcard-img">
+                                            <img src="./resources/images/thatks-proj/positive-attitude-mod.svg" alt="">
+                                        </div>
+                                        <input type="radio" name="postcard-template" value="positive-attitude" class="sample__input">
+                                        <div class="sample__name">
+                                            <span>За позитивный настрой</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                                <li class="sample" data-sample-postcard="other-thanks">
+                                    <div class="sample__wrapper">
+                                        <div class="sample__postcard-img">
+                                            <img src="./resources/images/thatks-proj/other-thanks-mod.svg" alt="">
+                                        </div>
+                                        <input type="radio" name="postcard-template" value="other-thanks" class="sample__input" checked>
+                                        <div class="sample__name">
+                                            <span>Другое</span>
+                                        </div>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div class="thanks-kit__block inputs">
+
+                            <div class="inputs__row">
+                                <div class="inputs__col">
+                                    <label class="thanks-kit__label">
+                                        <div class="label__wrap">
+                                            <span class="label-title">От кого</span>
+                                            <input class="or-field" type="text" placeholder="Имя Фамилия" name="" data-required-field>
+                                            <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
+
+                                        </div>
+                                    </label>
+
+                                    <label class="thanks-kit__label">
+                                        <div class="label__wrap">
+                                            <span class="label-title">Твоя должность</span>
+                                            <input class="or-field" type="text" placeholder="Должность" name="" data-required-field>
+                                            <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
+
+                                        </div>
+                                    </label>
+
+
+                                    <label class="thanks-kit__label">
+                                        <div class="label__wrap">
+                                            <span class="label-title">Твой город</span>
+                                            <input class="or-field" type="text" placeholder="Город" name="" data-required-field>
+                                            <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
+
+                                        </div>
+                                    </label>
+                                </div>
+                                <div class="inputs__col">
+                                    <label class="thanks-kit__label">
+                                        <div class="label__wrap">
+                                            <span class="label-title">Кому</span>
+                                            <input class="or-field" type="text" placeholder="Имя Фамилия" name="" data-required-field>
+                                            <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
+
+                                        </div>
+                                    </label>
+
+                                    <label class="thanks-kit__label">
+                                        <div class="label__wrap">
+                                            <span class="label-title">Должность сотрудника</span>
+                                            <input class="or-field" type="text" placeholder="Должность" name="" data-required-field>
+                                            <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
+
+                                        </div>
+                                    </label>
+
+                                    <label class="thanks-kit__label">
+                                        <div class="label__wrap">
+                                            <span class="label-title">Город</span>
+                                            <input class="or-field" type="text" placeholder="Город" name="" data-required-field>
+                                            <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
+
+                                        </div>
+                                    </label>
+
+                                    <label class="thanks-kit__label">
+                                        <div class="label__wrap">
+                                            <span class="label-title">E-mail получателя</span>
+                                            <input type="text" class="_email" placeholder="E-mail" name="" data-required-field>
+                                            <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
+                                            <div class="error-remark-text-email "><span class="red-star">*</span>Укажите валидный Email</div>
+
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="thanks-kit__block">
+                            <div class="thanks-kit__label">
+                                <div class="flex-title-wrap">
+                                    <span class="label-title">Текст Благодарности</span>
+                                    <span>до 250 символов</span>
+                                </div>
+                                <textarea data-character-counter type="text" data-required-field class="thanks-kit__textarea or-field" placeholder="Благодарность" name="" maxlength="250"></textarea>
+                                <div class="remark"><span class="red-star">*</span>Текст со звёздочкой</div>
+
+                                <div style="display: flex; justify-content: space-between;">
+                                    <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
+                                    <div class="character-counter">Введено: 0/250</div>
+                                </div>
+                            </div>
+                            <button class="thanks-kit__btn" type="submit">Отправить благодарность</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="thanks-modal" id="thanksResult">
+                <div class="thanks-modal__content">
+                    <div class="close-btn">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.41421 0L0 1.41421L8.29672 9.71094L0.00164873 18.006L1.41586 19.4202L9.71094 11.1252L18.006 19.4202L19.4202 18.006L11.1252 9.71094L19.4219 1.41421L18.0077 0L9.71094 8.29672L1.41421 0Z" fill="#9C9C9C" />
+                        </svg>
+                    </div>
+                    <h2 class="thanks-kit__title">Спасибо</h2>
+                    <div class="thanks-kit__image">
+                        <img src="./resources/images/thatks-proj/mail-img.png" alt="">
+                    </div>
+                    <span class="bold-t">Твоя благодарность <br> отправлена!</span>
+                </div>
+            </div>
+
+            <script>
+                //логика счётчика символов в поле ввода сообщения
+                const characterCounterField = document.querySelector('[data-character-counter]');
+                const characterCounter = document.querySelector('.character-counter');
+                if (characterCounterField && characterCounter) {
+                    characterCounterField.addEventListener('input', (e) => {
+                        const areaValue = e.target.value.replace(/[a-z]/gi, '');
+                        areaValueLength = areaValue.length;
+                        if (areaValue.length > 0) {
+                            characterCounter.style.opacity = 1;
+                        } else {
+                            characterCounter.style.opacity = 0;
+                        }
+                        characterCounter.innerText = `Введено: ${areaValueLength}/250`;
+
+                    });
+                }
+
+
+                // Запрет на ввод латиницы в поля с классом or-field 
+                let orFields = document.querySelectorAll('.or-field');
+                if (orFields.length > 0) {
+                    orFields.forEach(orField =>
+                        orField.addEventListener('input', () => {
+                            orField.value = orField.value.replace(/[a-z]/gi, '');
+                        }));
+                }
+
+                //Обработчик кликов
+                document.addEventListener('click', (e) => {
+                    const target = e.target;
+                    // Если нажали на кнопку открытия модалки спасибо
+                    if (target.closest('[data-modal-id]')) {
+                        const modalId = target.closest('[data-modal-id]').dataset.modalId;
+                        modalId && document.querySelector(`#${modalId}`).classList.add('show');
+                        return;
+                    }
+
+                    const thanksModal = document.querySelector('.thanks-modal.show');
+                    if (!thanksModal) return;
+                    // Закрываем модальное окно по клику на крестик или по клику в пустой области.
+                    if ((target.closest('.close-btn') && thanksModal.classList.contains('show')) ||
+                        (target.closest('.thanks-modal') && !target.closest('.thanks-modal__content'))) {
+                        thanksModal.classList.remove('show');
+                    }
+                });
+
+
+                const thankFormCreater = document.querySelector('#thank-form-crater');
+                if (thankFormCreater) {
+                    //функция валидации email
+                    const emailTest = (input) => {
+                        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                        return !re.test(input.value);
+                    }
+                    // Сабмит формы спасибо
+                    thankFormCreater.addEventListener('submit', (e) => {
+                        e.preventDefault();
+                        // Получаем все обязательные поля и валидируем их
+                        const formTextFields = thankFormCreater.querySelectorAll('[data-required-field]');
+                        formTextFields.forEach(field => {
+                            let fieldValue = field.value;
+                            //Доп валидация email по полю с классом _email
+                            if (field.classList.contains('_email')) {
+                                if (emailTest(field)) {
+                                    field.closest('.thanks-kit__label').classList.add('_error-email');
+                                    field.addEventListener('focus', (e) => {
+                                        field.closest('.thanks-kit__label').classList.remove('_error-email');
+                                    }, { once: true });
+                                }
+                            }
+                            // Валидация на пустое поле
+                            if (fieldValue.trim() === '') {
+                                field.closest('.thanks-kit__label').classList.add('_error');
+                                field.addEventListener('focus', (e) => {
+                                    field.closest('.thanks-kit__label').classList.remove('_error');
+                                }, { once: true });
+                            }
+                        });
+                        // Если в форме нет ошибок, сабмитим её
+                        if (!thankFormCreater.querySelector('._error, ._error-email')) {
+                            // Если форма прошла валидацию, отправляем данные на бэк,закрываем форму
+                            console.log('Данные можно отправлять');
+                            console.log('Данные можно отправлять');
+                            console.log('Данные можно отправлять');
+                            console.log('Данные можно отправлять');
+                            //При успешном сабмите, выполняем логику ниже
+                            const openedForm = document.querySelector('#thanksCreater');
+                            const resForm = document.querySelector('#thanksResult');
+                            // закрываем форму и обнуляем её
+                            openedForm && openedForm.classList.remove('show');
+                            thankFormCreater.reset();
+                            //обнуляем счётчик в поле ввода текста  и показываем модалку спасибо
+                            if (characterCounter) {
+                                characterCounter.innerText = 'Введено: 0/250';
+                            }
+                            resForm && resForm.classList.add('show');
+                        }
+                    });
+                }
+            </script>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__left">
+                <div class="footer__logo"></div>
+                <div class="footer__copyright">
+                    2018-2022 Пивоваренная компания "Балтика"<br>
+                </div>
+            </div>
+            <div class="footer__right">
+                <div class="footer__disclaimer">
+                    <a href="http://corporate.baltika.ru/i/mediakit_file/6053.pdf" target="_blank" style="text-decoration:underline;">Регламент в отношении обработки персональных данных и реализуемых требований к защите персональных данных</a>
+                </div>
+                <a href="/subscribe/" class="footer__subscribe-link">Подпишитесь на нашу рассылку</a>
+                <div class="footer__developer">Разработано в <a href="http://ml-d.ru" target="_blank">Medialine Digital</a>
+                </div>
+                <a href="/arhive/" class="footer__subscribe-link">Архив</a>
+            </div>
+        </div>
+
+        <div style="text-align:center;color:#5a85b5;text-transform:uppercase;font-size:20px;">Предупреждаем о вреде чрезмерного потребления алкогольной продукции<br><br>
+        </div>
+
+    </footer>
+</body>
+
+</html>

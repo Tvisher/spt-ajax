@@ -1,0 +1,45 @@
+.typo .shortcode-shortquote {font-size: 16px!important;}
+.typo h2, .typo .h2 { font-size: 28px!important;}
+
+.typo .shortcode-shortquote:before
+{
+width: 200px!important;
+height: 40px!important;
+background-size: 90% auto!important;
+top: -19px!important;
+}
+
+.typo .shortcode-shortquote:after
+{
+width: 200px!important;
+height: 40px!important;
+background-size: 90% auto!important;
+}
+
+.typo .shortcode-shortquote {border:none!important;margin-bottom:30px!important;}
+
+.modal-gallery-photo__title {display:none;}
+.popup-video__author {display:none;}
+
+.video-block__header:after {background:none!important;}
+
+.form-group__input-holder a {text-decoration:underline!important;}
+
+.footer__disclaimer::before {display:none;}
+.footer__disclaimer{padding-right:0;font-size:11px;}
+
+.quiz-block__header::after {background:none!important;}
+
+.contest-page__pre-title::after {display:none;}
+.contest-page__header::after {background: rgba(0, 0, 0, 0.3);}
+
+
+.quiz-page__description {width:90%;}
+
+.navbar .navbar__item:last-child {
+    font-weight: normal!important;
+}
+.contest-work-preview__likes{
+    z-index: 1;
+}
+
