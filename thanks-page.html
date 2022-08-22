@@ -766,7 +766,7 @@
                         return !re.test(input.value);
                     }
                     // Сабмит формы спасибо
-                    thankFormCreater.addEventListener('submit', (e) => {
+                    thankFormCreater.addEventListener('submit', async (e) => {
                         e.preventDefault();
                         // Получаем все обязательные поля и валидируем их
                         const formTextFields = thankFormCreater.querySelectorAll('[data-required-field]');
@@ -789,9 +789,9 @@
                                 }, { once: true });
                             }
                         });
+
                         // Если в форме нет ошибок, сабмитим её
                         if (!thankFormCreater.querySelector('._error, ._error-email')) {
-                            // Если форма прошла валидацию, отправляем данные на бэк,закрываем форму
                             const postcardTemplate = thankFormCreater.elements["postcard-template"].value;
                             const fromName = thankFormCreater['from-name'].value;
                             const fromJob = thankFormCreater['from-job'].value;
@@ -814,23 +814,26 @@
                                 message
                             }
 
-                            // Место для аякс запоса
-                            // Место для аякс запоса
-                            // Место для аякс запоса
-                            // Место для аякс запоса
-                            // Место для аякс запоса
-
-                            //При успешном сабмите, выполняем логику ниже
-                            const openedForm = document.querySelector('#thanksCreater');
-                            const resForm = document.querySelector('#thanksResult');
-                            // закрываем форму и обнуляем её
-                            openedForm && openedForm.classList.remove('show');
-                            thankFormCreater.reset();
-                            //обнуляем счётчик в поле ввода текста  и показываем модалку спасибо
-                            if (characterCounter) {
-                                characterCounter.innerText = 'Введено: 0/250';
+                            let response = await fetch('/', {
+                                method: 'POST',
+                                body: dataObj
+                            });
+                            if (response.ok) {
+                                const openedForm = document.querySelector('#thanksCreater');
+                                const resForm = document.querySelector('#thanksResult');
+                                // закрываем форму и обнуляем её
+                                openedForm && openedForm.classList.remove('show');
+                                thankFormCreater.reset();
+                                //обнуляем счётчик в поле ввода текста  и показываем модалку спасибо
+                                if (characterCounter) {
+                                    characterCounter.innerText = 'Введено: 0/250';
+                                }
+                                resForm && resForm.classList.add('show');
                             }
-                            resForm && resForm.classList.add('show');
+                            else {
+                                console.log('Ошибка');
+                            }
+
                         }
                     });
                 }
