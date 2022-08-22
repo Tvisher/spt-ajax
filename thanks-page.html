@@ -610,7 +610,7 @@
                                     <label class="thanks-kit__label">
                                         <div class="label__wrap">
                                             <span class="label-title">От кого</span>
-                                            <input class="or-field" type="text" placeholder="Имя Фамилия" name="" data-required-field>
+                                            <input class="or-field" type="text" placeholder="Имя Фамилия" name="from-name" data-required-field>
                                             <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
 
                                         </div>
@@ -619,7 +619,7 @@
                                     <label class="thanks-kit__label">
                                         <div class="label__wrap">
                                             <span class="label-title">Твоя должность</span>
-                                            <input class="or-field" type="text" placeholder="Должность" name="" data-required-field>
+                                            <input class="or-field" type="text" placeholder="Должность" name="from-job" data-required-field>
                                             <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
 
                                         </div>
@@ -629,7 +629,7 @@
                                     <label class="thanks-kit__label">
                                         <div class="label__wrap">
                                             <span class="label-title">Твой город</span>
-                                            <input class="or-field" type="text" placeholder="Город" name="" data-required-field>
+                                            <input class="or-field" type="text" placeholder="Город" name="from-city" data-required-field>
                                             <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
 
                                         </div>
@@ -639,7 +639,7 @@
                                     <label class="thanks-kit__label">
                                         <div class="label__wrap">
                                             <span class="label-title">Кому</span>
-                                            <input class="or-field" type="text" placeholder="Имя Фамилия" name="" data-required-field>
+                                            <input class="or-field" type="text" placeholder="Имя Фамилия" name="to-name" data-required-field>
                                             <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
 
                                         </div>
@@ -648,7 +648,7 @@
                                     <label class="thanks-kit__label">
                                         <div class="label__wrap">
                                             <span class="label-title">Должность сотрудника</span>
-                                            <input class="or-field" type="text" placeholder="Должность" name="" data-required-field>
+                                            <input class="or-field" type="text" placeholder="Должность" name="to-job" data-required-field>
                                             <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
 
                                         </div>
@@ -657,7 +657,7 @@
                                     <label class="thanks-kit__label">
                                         <div class="label__wrap">
                                             <span class="label-title">Город</span>
-                                            <input class="or-field" type="text" placeholder="Город" name="" data-required-field>
+                                            <input class="or-field" type="text" placeholder="Город" name="to-city" data-required-field>
                                             <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
 
                                         </div>
@@ -666,7 +666,7 @@
                                     <label class="thanks-kit__label">
                                         <div class="label__wrap">
                                             <span class="label-title">E-mail получателя</span>
-                                            <input type="text" class="_email" placeholder="E-mail" name="" data-required-field>
+                                            <input type="text" class="_email" placeholder="E-mail" name="email" data-required-field>
                                             <div class="error-remark-text"><span class="red-star">*</span>Обязательное поле</div>
                                             <div class="error-remark-text-email "><span class="red-star">*</span>Укажите валидный Email</div>
 
@@ -681,7 +681,7 @@
                                     <span class="label-title">Текст Благодарности</span>
                                     <span>до 250 символов</span>
                                 </div>
-                                <textarea data-character-counter type="text" data-required-field class="thanks-kit__textarea or-field" placeholder="Благодарность" name="" maxlength="250"></textarea>
+                                <textarea data-character-counter type="text" data-required-field class="thanks-kit__textarea or-field" placeholder="Благодарность" name="message" maxlength="250"></textarea>
                                 <div class="remark"><span class="red-star">*</span>Текст со звёздочкой</div>
 
                                 <div style="display: flex; justify-content: space-between;">
@@ -792,10 +792,34 @@
                         // Если в форме нет ошибок, сабмитим её
                         if (!thankFormCreater.querySelector('._error, ._error-email')) {
                             // Если форма прошла валидацию, отправляем данные на бэк,закрываем форму
-                            console.log('Данные можно отправлять');
-                            console.log('Данные можно отправлять');
-                            console.log('Данные можно отправлять');
-                            console.log('Данные можно отправлять');
+                            const postcardTemplate = thankFormCreater.elements["postcard-template"].value;
+                            const fromName = thankFormCreater['from-name'].value;
+                            const fromJob = thankFormCreater['from-job'].value;
+                            const fromCity = thankFormCreater['from-city'].value;
+                            const toName = thankFormCreater['to-name'].value;
+                            const toJob = thankFormCreater['to-job'].value;
+                            const toCity = thankFormCreater['to-city'].value;
+                            const email = thankFormCreater['email'].value;
+                            const message = thankFormCreater['message'].value;
+
+                            const dataObj = {
+                                postcardTemplate,
+                                fromName,
+                                fromJob,
+                                fromCity,
+                                toName,
+                                toJob,
+                                toCity,
+                                email,
+                                message
+                            }
+
+                            // Место для аякс запоса
+                            // Место для аякс запоса
+                            // Место для аякс запоса
+                            // Место для аякс запоса
+                            // Место для аякс запоса
+
                             //При успешном сабмите, выполняем логику ниже
                             const openedForm = document.querySelector('#thanksCreater');
                             const resForm = document.querySelector('#thanksResult');
